@@ -1,3 +1,4 @@
+node_modules/
+public/
+.idea/
 npm-debug.log
-node_modules
-build
