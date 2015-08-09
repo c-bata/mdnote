@@ -1,44 +1,30 @@
 import React  from 'react';
 import marked from 'marked';
 
-var CommentBox = React.createClass({
-    render: () => {
-        return (
-            <div className="commentBox">
-                <h1>Comments</h1>
-                <CommentList />
-                <CommentForm />
-            </div>
-        );
-    }
-});
-
-class CommentList extends React.Component {
+class EditorPane extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {markdown: 'This is *comment* written in **markdown**.'};
+        this.state = {text: "", placeholder: this.props.placeholder};
+    }
+    handleChange(event) {
+        this.setState({text: event.target.value});
     }
     render() {
-        let rawHtml = marked(this.state.markdown)
+        let rawHtml = marked(this.state.text)
         return (
-            <div className="commentList">
+            <div className="editorBox">
+                <textarea className="editor form-control"
+                          onChange={this.handleChange}
+                          placeholder={this.state.placeholder}>
+                </textarea>
+                <span>{this.state.text.length} 文字</span>
                 <span dangerouslySetInnerHTML={{__html: rawHtml}} />
             </div>
         );
     }
 };
 
-var CommentForm = React.createClass({
-    render: () => {
-        return (
-            <div className="commentForm">
-                Hello, world! I am a CommentForm.
-            </div>
-        );
-    }
-});
-
 React.render(
-    <CommentBox />,
+    <EditorPane placeholder="ここがノートです." />,
     document.getElementById('content')
 );
