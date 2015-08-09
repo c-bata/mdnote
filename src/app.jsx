@@ -13,16 +13,20 @@ var CommentBox = React.createClass({
     }
 });
 
-var CommentList = React.createClass({
-    render: () => {
-        var rawHtml = marked('This is *comment* written in **markdown**')
+class CommentList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {markdown: 'This is *comment* written in **markdown**.'};
+    }
+    render() {
+        let rawHtml = marked(this.state.markdown)
         return (
             <div className="commentList">
                 <span dangerouslySetInnerHTML={{__html: rawHtml}} />
             </div>
         );
     }
-});
+};
 
 var CommentForm = React.createClass({
     render: () => {
