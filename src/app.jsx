@@ -14,7 +14,7 @@ class EditorPane extends React.Component {
         return (
             <div className="editorBox">
                 <textarea className="editor form-control"
-                          onChange={this.handleChange}
+                          onChange={this.handleChange.bind(this)}
                           placeholder={this.state.placeholder}>
                 </textarea>
                 <span>{this.state.text.length} 文字</span>
