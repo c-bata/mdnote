@@ -1,12 +1,18 @@
 import React from 'react';
 
-const HelloMessage = React.createClass({
-    render() {
-        return <div>Hello {this.props.name}</div>;
+var CommentBox = React.createClass({
+    render: () => {
+        return (
+            <div className="commentBox">
+                Hello, world! I am a CommentBox.
+            </div>
+        );
     }
 });
 
 React.render(
-    <HelloMessage name="Masashi" />,
-    document.getElementById('app-container')
+    <CommentBox />,
+    document.getElementById('content')
 );
+
+console.log('Hello');
