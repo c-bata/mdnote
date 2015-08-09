@@ -14,5 +14,3 @@ React.render(
     <CommentBox />,
     document.getElementById('content')
 );
-
-console.log('Hello');
