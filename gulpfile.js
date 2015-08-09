@@ -14,7 +14,7 @@ var paths = {
 };
 
 gulp.task('build', function() {
-  browserify(paths.SRC + 'app.jsx', { debug: true })
+  watchify(browserify(paths.SRC + 'app.jsx', { debug: true })
     .transform(babelify)
     .bundle()
     .on("error", function (err) { console.log("Error : " + err.message); })
@@ -24,7 +24,7 @@ gulp.task('build', function() {
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.BUILD))
-});
+)});
 
 gulp.task('watch', function() {
   gulp.watch('./src/**/*', ['build'])
