@@ -18,10 +18,15 @@ Markdownで書けるメモ帳
     公式チュートリアル。あまり読まなかった.
 
 - http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/
-    めちゃくちゃ分かりやすいReact.jsのチュートリアル
+    めちゃくちゃ分かりやすいReact.jsのチュートリアル。コレをベースにMarkdown Editor実装.
 
 - http://sadah.hatenablog.com/entry/2015/08/03/085828
     ES6で書くときにハマるところが多いのですが、この記事に何度も助けられました。
+    
+    ```
+    // ES6でイベントリスナーを設定する場合、 .bind(this) を追加.
+    onChange={this.handleChange.bind(this)}
+    ```
 
 - http://qiita.com/sugarshin/items/3ce64420b0181990480e
     exportのあたりを参考にさせていただきました。
@@ -31,3 +36,20 @@ Markdownで書けるメモ帳
 
 - http://qiita.com/M-ISO/items/6c8b97a9447ccfe9a1f6
     stateとpropsについて簡潔にまとまっていて分かりやすかったです
+
+#### テスト編
+
+- 入門React
+    テストの章は解説も丁寧で助かった。これをベースに勉強していく.
+
+- http://qiita.com/uryyyyyyy/items/0161aaacff981de918e5
+    global.documentのところでハマりました。jsdom使ってやるっぽいです。
+    
+    ```
+    import jsdom      from 'jsdom';
+    global.document = jsdom.jsdom("<!doctype html><html><body></body></html>");
+    global.window   = document.parentWindow;
+    ```
+
+- http://codezine.jp/article/detail/8512?p=7
+    まだちゃんと読んでないですが役立ちそう
