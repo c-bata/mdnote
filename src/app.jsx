@@ -1,4 +1,5 @@
-import React from 'react';
+import React  from 'react';
+import marked from 'marked';
 
 var CommentBox = React.createClass({
     render: () => {
@@ -14,9 +15,10 @@ var CommentBox = React.createClass({
 
 var CommentList = React.createClass({
     render: () => {
+        var rawHtml = marked('This is *comment* written in **markdown**')
         return (
             <div className="commentList">
-                Hello, world! I am a CommentList.
+                <span dangerouslySetInnerHTML={{__html: rawHtml}} />
             </div>
         );
     }
