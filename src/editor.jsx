@@ -14,7 +14,6 @@ export default class Editor extends React.Component {
         this.setState({text: event.target.value});
     }
     render() {
-        let rawHtml = marked(this.state.text)
         return (
             <div className="editor-container">
                 <div className="row">
@@ -26,7 +25,7 @@ export default class Editor extends React.Component {
                         </textarea>
                     </div>
                     <div className="col-sm-6">
-                        <span dangerouslySetInnerHTML={{__html: rawHtml}} />
+                        <EditorPreview markdownText={this.state.text} />
                     </div>
                 </div>
                 <span>現在 {this.state.text.length} 文字</span>
@@ -34,3 +33,10 @@ export default class Editor extends React.Component {
         );
     }
 };
+
+class EditorPreview extends React.Component {
+    render() {
+        let rawHtml = marked(this.props.markdownText)
+        return <span dangerouslySetInnerHTML={{__html: rawHtml}} />
+    }
+}
