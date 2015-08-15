@@ -89,6 +89,10 @@ Markdownで書けるメモ帳
     jsdomのsetupを `dom.js` にまとめようとしたら `ReferenceError: navigator is not defined`
     って怒られたのが、コレのとおりにしたら治った
 
+- http://foreignkey.jp/archives/763
+
+    JavaScriptのthisの扱いについて分かりやすく解説されていた。
+
 - http://codezine.jp/article/detail/8512?p=7
 
     まだちゃんと読んでないですが役立ちそう

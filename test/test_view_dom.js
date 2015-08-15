@@ -5,8 +5,22 @@ import Editor     from '../src/editor.jsx';
 
 var TestUtils = React.addons.TestUtils;
 
-describe('Editorのテスト', () => {
-    it('正常系:レンダリング', () => {
-        TestUtils.renderIntoDocument(<Editor />);
+describe('Editorのテスト', function () {
+    before('render and locate element', () => {
+        var renderedComponent = TestUtils.renderIntoDocument(
+            <Editor rows="10" placeholder="プレースホルダ" />
+        );
+        var inputComponent = TestUtils.findRenderedDOMComponentWithTag(
+            renderedComponent, 'textarea'
+        );
+        this.inputElement = inputComponent.getDOMNode();
+    });
+
+    it('正常系: propsで渡した行数が一致', () => {
+        assert(this.inputElement.getAttribute('rows') === "10")
+    });
+
+    it('正常系: propsで渡したplaceholderが一致', () => {
+        assert(this.inputElement.getAttribute('placeholder') === "プレースホルダ")
     });
 });
