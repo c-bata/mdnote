@@ -84,6 +84,11 @@ Markdownで書けるメモ帳
     global.window   = document.parentWindow;
     ```
 
+- http://jaketrent.com/post/testing-react-with-jsdom/
+
+    jsdomのsetupを `dom.js` にまとめようとしたら `ReferenceError: navigator is not defined`
+    って怒られたのが、コレのとおりにしたら治った
+
 - http://codezine.jp/article/detail/8512?p=7
 
     まだちゃんと読んでないですが役立ちそう
