@@ -25,26 +25,4 @@ describe('Editorのテスト', function() {
             assert(this.inputElement.getAttribute('placeholder') === "プレースホルダ")
         });
     });
-
-    describe('stateのテスト', function() {
-        it('正常系: textareaへの入力イベント', () => {
-            var renderedComponent = TestUtils.renderIntoDocument(
-                <Editor rows="10" placeholder="プレースホルダ" />
-            );
-            TestUtils.Simulate.change(
-                TestUtils.findRenderedDOMComponentWithTag(renderedComponent, 'textarea'),
-                {target: {value: '# Hello, world'}}
-            );
-            assert(React.findDOMNode(renderedComponent).textContent.indexOf("<h1>Hello World!</h1>") !== 1)
-        });
-
-        it('異常系: textareaへの入力イベント', () => {
-            var renderedComponent = TestUtils.renderIntoDocument(
-                <Editor rows="10" placeholder="プレースホルダ" />
-            );
-            let input = TestUtils.findRenderedDOMComponentWithTag(renderedComponent, 'textarea')
-            TestUtils.Simulate.change(input, {target: {value: '## Hello, world'}});
-            assert(React.findDOMNode(renderedComponent).textContent.indexOf("<h1>Hello World!</h1>") !== 1)
-        });
-    });
 });

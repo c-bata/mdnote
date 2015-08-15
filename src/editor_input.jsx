@@ -7,7 +7,7 @@ export default class EditorInput extends React.Component {
     render() {
         return (
             <textarea onChange={this._onChange.bind(this)}
-                      className="editor form-control"
+                      className={this.props.className}
                       placeholder={this.props.placeholder}
                       rows={this.props.rows} >
             </textarea>

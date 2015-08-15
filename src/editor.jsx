@@ -20,6 +20,7 @@ export default class Editor extends React.Component {
                 <div className="row">
                     <div className="col-sm-6">
                         <EditorInput onChange={this.updateMarkdown.bind(this)}
+                                     className="editor form-control"
                                      placeholder={this.state.placeholder}
                                      rows={this.state.rows} />
                     </div>

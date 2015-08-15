@@ -24,4 +24,19 @@ describe('EditorInputのテスト', function() {
             assert(this.inputElement.getAttribute('placeholder') === "プレースホルダ")
         });
     });
+
+    /*
+    describe('stateのテスト', function() {
+        it('正常系: textareaへの入力イベント', () => {
+            var renderedComponent = TestUtils.renderIntoDocument(
+                <EditorInput rows="10" placeholder="プレースホルダ" />
+            );
+            TestUtils.Simulate.change(
+                TestUtils.findRenderedDOMComponentWithTag(renderedComponent, 'textarea'),
+                {target: {value: '# Hello, world'}}
+            );
+            assert(React.findDOMNode(renderedComponent).textContent.indexOf("Hello World!") !== 1)
+        });
+    });
+    */
 });
