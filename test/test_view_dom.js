@@ -3,7 +3,7 @@ import React      from 'react/addons';
 import proxyquire from 'proxyquire';
 import Editor     from '../src/editor.jsx';
 
-var TestUtils = React.addons.TestUtils;
+var {TestUtils} = React.addons;
 
 describe('Editorのテスト', function() {
     describe('propsのテスト', function(){

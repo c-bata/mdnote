@@ -1,7 +1,7 @@
 import assert     from 'power-assert';
 import React      from 'react/addons';
 
-var TestUtils = React.addons.TestUtils;
+var {TestUtils} = React.addons;
 
 import HelloWorld from '../src/hello.jsx';
 
