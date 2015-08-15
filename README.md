@@ -9,6 +9,7 @@ Markdownで書けるメモ帳
 - ES6(Babel)
 - testing(mocha, power-assert)
 - React.js
+- Flux(alt)
 - Electron
 
 
@@ -30,9 +31,21 @@ Markdownで書けるメモ帳
 
 - ES6
     - アロー関数はcoffeescriptの影響かな？シンプルにかけていい
-    - class構文は
+    - javascriptでのthisの扱いがよく分かってないので結構ハマった
+        - http://foreignkey.jp/archives/763 これでなんとなくわかった気がします
+
+- Flux
+
+    React.jsだけだと、
+
+    - 深くなった時にやっぱりpropsでのイベントの伝播をいちいち記述するのがかなり面倒
+    - 親になるコンポーネントにStateが集中しちゃってデータ構造が複雑になる
+    
+    これはやっぱり書いてても感じたので、Fluxアーキテクチャは採用したほうがいいですね。
 
 ## 参考資料
+
+#### React.js + ES6
 
 - https://facebook.github.io/react/docs/tutorial-ja-JP.html
 
@@ -97,3 +110,15 @@ Markdownで書けるメモ帳
 
     まだちゃんと読んでないですが役立ちそう
 
+#### Flux編
+
+- Web+DB Press vol.68, 69 naoyaさんの連載
+
+    React.jsのところはある程度他の資料で勉強していたのでざっと目を通す程度で読み飛ばした。
+    なぜFluxが必要なのかスッキリ理解できるような構成になっていて勉強になりました。
+    最初からこれをベースにES6に書き換えながら勉強しておけばよかった感じもする.
+
+- http://qiita.com/cortyuming/items/a4952e05df636ff72689
+
+    fluxxorはES6の構文に未対応みたいだった(MixinとかはそもそもReact.jsが未対応っぽい)ので
+    これを参考にaltを使いました。
