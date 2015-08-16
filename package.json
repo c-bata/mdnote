@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "browserify --transform babelify src/js/main.jsx --outfile public/main.js",
+    "build": "gulp build",
     "test": "mocha --compilers js:espower-babel/guess test/**/*.js",
     "server": "python -m SimpleHTTPServer 8000"
   },
