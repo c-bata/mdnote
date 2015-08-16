@@ -1,5 +1,5 @@
 import React  from 'react';
-import Editor from './editor.jsx';
+import Editor from './components/editor.jsx';
 
 React.render(
     <Editor placeholder="ここがノートです." rows="30" />,
