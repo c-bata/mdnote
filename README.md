@@ -122,3 +122,6 @@ Markdownで書けるメモ帳
 
     fluxxorはES6の構文に未対応みたいだった(MixinとかはそもそもReact.jsが未対応っぽい)ので
     これを参考にaltを使いました。
+    
+    http://qiita.com/cortyuming/items/bf24a087b4831ffa20f8
+    こっちのほうがいいかもしれないけど、altの方が理解そうな気がしてalt使った。
