@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps')
 var paths = {
   OUT: "bundle.js",
   SRC: "./src/",
-  BUILD: "./build/"
+  BUILD: "./public/js/"
 };
 
 gulp.task('build', function() {
