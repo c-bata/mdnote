@@ -32,6 +32,10 @@ Markdownで書けるメモ帳
     - アロー関数はcoffeescriptの影響かな？シンプルにかけていい
     - class構文は
 
+- Electron
+
+    予想以上に手軽。簡単にDesktopアプリに出来る。
+
 ## 参考資料
 
 - https://facebook.github.io/react/docs/tutorial-ja-JP.html
@@ -97,3 +101,13 @@ Markdownで書けるメモ帳
 
     まだちゃんと読んでないですが役立ちそう
 
+#### Electron編
+
+htmlを `index.html` にして、 `index.js` を用意。
+後は `electron public` ってやれば動いてくれる。
+手軽ですごくいい。
+
+- http://qiita.com/nyanchu/items/15d514d9b9f87e5c0a29
+- http://qiita.com/nyanchu/items/1dcd42ba6473f6afa575
+- http://qiita.com/Quramy/items/90d61ff37ca1b95a7f6d
+- http://qiita.com/Quramy/items/a4be32769366cfe55778

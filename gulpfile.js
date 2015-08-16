@@ -10,11 +10,11 @@ var sourcemaps = require('gulp-sourcemaps')
 var paths = {
   OUT: "bundle.js",
   SRC: "./src/",
-  BUILD: "./build/"
+  BUILD: "./public/js/"
 };
 
 gulp.task('build', function() {
-  watchify(browserify(paths.SRC + 'app.jsx', { debug: true })
+  watchify(browserify(paths.SRC + 'main.jsx', { debug: true })
     .transform(babelify)
     .bundle()
     .on("error", function (err) { console.log("Error : " + err.message); })

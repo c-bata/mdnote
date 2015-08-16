@@ -7,9 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "build": "browserify --transform babelify src/js/main.jsx --outfile public/main.js",
+    "build": "gulp build",
     "test": "mocha --compilers js:espower-babel/guess test/**/*.js",
-    "server": "python -m SimpleHTTPServer 8000"
+    "server": "python -m SimpleHTTPServer 8000",
+    "electron": "electron public"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "babelify": "^6.1.3",
     "browserify": "^9.0.8",
+    "electron-prebuilt": "^0.30.4",
     "espower-babel": "^3.2.0",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.5.2",
