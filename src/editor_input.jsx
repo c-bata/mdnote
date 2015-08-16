@@ -1,12 +1,10 @@
 import React  from 'react';
+import EditorActions  from './actions/editor_actions'
 
 export default class EditorInput extends React.Component {
-    _onChange(event) {
-        this.props.onChange(event.target.value);
-    }
     render() {
         return (
-            <textarea onChange={this._onChange.bind(this)}
+            <textarea onChange={EditorActions.updateMarkdown}
                       className={this.props.className}
                       placeholder={this.props.placeholder}
                       rows={this.props.rows} >
