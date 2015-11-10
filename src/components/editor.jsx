@@ -17,14 +17,14 @@ export default class Editor extends React.Component {
     render() {
         return (
             <div className="editor-container">
-                <div className="row">
-                    <div className="col-sm-6">
+                <div className="editor">
+                    <div className="editor-markdown">
                         <EditorInput onChange={this.updateMarkdown.bind(this)}
                                      className="editor form-control"
                                      placeholder={this.state.placeholder}
                                      rows={this.state.rows} />
                     </div>
-                    <div className="col-sm-6">
+                    <div className="editor-preview">
                         <EditorPreview markdownText={this.state.markdown} />
                     </div>
                 </div>
